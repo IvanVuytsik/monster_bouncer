@@ -1,3 +1,3 @@
 # monster_bouncer
-This projects uses geneative gaphics. 
+This project uses generative gaphics. 
 Based on Fank's Lab physics game.
