@@ -275,7 +275,7 @@ window.addEventListener('load', function(){
             });
 
             this.game.enemies.forEach(enemy => {
-                if (this.game.checkCollision(this, enemy)[0]){
+                if (this.game.checkCollision(this, enemy)[0] && !this.game.gameOver){
                     this.markedForDeletion = true;
                     this.game.removeGameObjects();
                     this.game.lostCubs ++;
@@ -501,7 +501,7 @@ window.addEventListener('load', function(){
                 context.fillText('Lost: ' + this.lostCubs, this.canvas.width - 200, 100);
             }
             context.restore();
-P
+
             //win / lose
             if (this.score >= this.winningScore || this.lostCubs > 10){
                 this.gameOver = true;
